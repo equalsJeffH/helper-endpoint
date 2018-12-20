@@ -14,6 +14,8 @@ app.get('/v1/title-from-url/', function (req, res) {
 });
 
 var port = config.get('server.port');
-app.listen(port, function() {
+var address = config.get('server.address');
+
+app.listen(port, address, function() {
     console.log("App listening on port " + port)
 });
